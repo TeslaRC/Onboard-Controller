@@ -7,6 +7,7 @@ This repository contains the necessary scripts and code to set up an onboard con
 - [Introduction](#introduction)
 - [Repository Contents](#repository-contents)
 - [Getting Started](#getting-started)
+  - [Compatible Boards](#compatible-boards)
   - [Hardware Setup](#hardware-setup)
   - [Setting Up ZeroTier Network](#setting-up-zerotier-network)
   - [Software Installation](#software-installation)
@@ -25,6 +26,16 @@ The onboard controller system allows you to remotely control an FPV RC car using
 - `arduino/arduino.ino`: Arduino code to control the ESC and steering servo based on received throttle values.
 
 ## Getting Started
+
+## Compatible Boards
+
+This project is compatible with a variety of ARM-based boards running Ubuntu, including but not limited to:
+- Jetson Nano
+- Raspberry Pi (various models)
+- Orange Pi
+
+These boards was tested and can effectively encode and send video from the onboard camera, providing a seamless FPV experience for your RC car.
+You can use every other board that can encode and send video.
 
 ### Hardware Setup
 
