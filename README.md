@@ -11,9 +11,9 @@ This repository contains the necessary scripts and code to set up an onboard con
   - [Hardware Setup](#hardware-setup)
   - [Setting Up ZeroTier Network](#setting-up-zerotier-network)
   - [Software Installation](#software-installation)
-
 - [Usage](#usage)
 - [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -80,5 +80,10 @@ You can use every other board that can encode and send video.
 ## License
 
 This project is licensed under the [GNU General Public License (GPL)](LICENSE). You are free to use, modify, and distribute this software according to the terms of the license.
+
+## Acknowledgements
+
+- The TeslaRC Ground Station software is developed by [tesla](https://github.com/tesla15).
+- Special thanks to contributors and the open-source community for their valuable contributions and support.
 
 ---
