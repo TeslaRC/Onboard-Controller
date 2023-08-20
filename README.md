@@ -1,4 +1,4 @@
-# Onboard Controller for FPV RC Car
+# Onboard Controller for 4G FPV RC Car
 
 This repository contains the necessary scripts and code to set up an onboard controller system for an FPV RC car. The onboard controller enables real-time control of the car's throttle and steering while receiving video feed from an onboard camera.
 
