@@ -64,7 +64,7 @@ You can use every other board that can encode and send video.
 
 2. Transfer the `steering/script.py` script to your Jetson Nano/Raspberry Pi or other compatible board.
 
-3. Modify the IP address and port in the `start.sh` script to match your configuration.
+3. Modify the IP address and port in the `script.py` script to match your configuration.
 
 4. Use the following command to make the `start.sh` script executable: `chmod +x start.sh`
 
@@ -83,7 +83,7 @@ This project is licensed under the [GNU General Public License (GPL)](LICENSE). 
 
 ## Acknowledgements
 
-- The TeslaRC Onboard Controller software is developed by [tesla](https://github.com/tesla15).
+- The TeslaRC Onboard Controller software is developed by [tesla](https://github.com/tesla15) and [arin](https://github.com/arin2115).
 - Special thanks to contributors and the open-source community for their valuable contributions and support.
 
 ---
