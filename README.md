@@ -22,7 +22,7 @@ The onboard controller system allows you to remotely control an FPV RC car using
 ## Repository Contents
 
 - `start.sh`: A shell script that launches the video streaming and control processes.
-- `steering/script.py`: A Python script for receiving throttle values from the ground station and controlling the steering servo and ESC.
+- `steering/index.js`: A Python script for receiving throttle values from the ground station and controlling the steering servo and ESC.
 - `arduino/arduino.ino`: Arduino code to control the ESC and steering servo based on received throttle values.
 
 ## Getting Started
@@ -62,9 +62,9 @@ You can use every other board that can encode and send video.
 
 1. Upload the `arduino/arduino.ino` code to your Arduino-compatible board.
 
-2. Transfer the `steering/script.py` script to your Jetson Nano/Raspberry Pi or other compatible board.
+2. Transfer the `steering/index.js` script to your Jetson Nano/Raspberry Pi or other compatible board.
 
-3. Modify the IP address and port in the `script.py` script to match your configuration.
+3. Modify the IP address and port in the `index.js` script to match your configuration.
 
 4. Use the following command to make the `start.sh` script executable: `chmod +x start.sh`
 
