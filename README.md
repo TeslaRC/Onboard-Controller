@@ -71,7 +71,7 @@ You can use every other board that can encode and send video.
 
 ## Usage
 
-1. Execute the `start.sh` script on your Raspberry Pi Pico or compatible board to start the video streaming and control processes.
+1. Execute the `start.sh` script as **sudo** on your Raspberry Pi Pico or compatible board to start the video streaming and control processes.
 
 2. Launch the ground station application to control the car's throttle and steering remotely.
 
