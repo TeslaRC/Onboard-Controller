@@ -2,15 +2,13 @@
 
 cleanup() {
     echo "Cleaning up and killing processes..."
-    
-    # Kill the processes
-    sudo killall python3
-    killall python3
+    sudo killall node
+    killall node
     exit 0
 }
 
 # Start ESC controller
-sudo /usr/bin/python3 /home/ye/rc/steering/script.py &
+sudo node steering/index.js &
 
 trap cleanup EXIT
 
@@ -19,4 +17,3 @@ read -p "Press Enter to stop the processes..."
 
 # Clean up and kill processes when Enter key is pressed
 cleanup
-
