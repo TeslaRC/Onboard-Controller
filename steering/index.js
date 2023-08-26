@@ -11,6 +11,7 @@ const os = require('os');
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+io.eio.pingInterval = 500;
 
 var cpuUsage = 0;
 
@@ -46,9 +47,30 @@ const serialPort = new SerialPort({
 })
 
 var audio = null;
+let isHeartbeatReceived = false;
 
 io.on("connection", function (socket) {
     console.log('Ground station connected!');
+    
+    socket.on('heartbeat', () => {
+        isHeartbeatReceived = true;
+    });
+
+    const heartbeatCheckInterval = setInterval(() => {
+        if (!isHeartbeatReceived) {
+            console.log('Client connection lost:', socket.id);
+            console.log('Ground station disconnected!');
+            serialPort.write(1500 + '\n');
+            serialPort.write(2091 + '\n');
+            socket.disconnect(); 
+        }
+        isHeartbeatReceived = false;
+    }, 400); 
+
+    // Handle cleanup when the socket disconnects
+    socket.on('disconnect', () => {
+        clearInterval(heartbeatCheckInterval); // Clear the heartbeat check interval
+    });
 
     socket.on('throttle', (data) => {
         console.log(`Received Throttle Value: ${data}`);
@@ -118,8 +140,8 @@ io.on("connection", function (socket) {
 
     socket.on("disconnect", () => {
         console.log("Ground station disconnected!");
-        serialPort.write(1500 + "\n");
-        serialPort.write(2001 + "\n");
+        serialPort.write(1500 + '\n');
+        serialPort.write(2091 + '\n');
     });
 });
 
